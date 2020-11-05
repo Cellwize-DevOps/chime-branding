@@ -1,7 +1,7 @@
 metadata:
-  name: che-theia-all
+  name: chime-python-template
 projects:
-  - name: che-cheia-branding-example
+  - name: chime-python-template
     source:
       location: 'https://github.com/Cellwize-DevOps/chime-python-template.git'
       type: git
