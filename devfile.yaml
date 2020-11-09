@@ -14,7 +14,7 @@ components:
   - mountSources: true
     memoryLimit: 512Mi
     type: dockerimage
-    image: 'quay.io/eclipse/che-python-3.7:nightly'
+    image: 'quay.io/eclipse/che-python-3.8:nightly'
     alias: python
   - type: cheEditor
     reference: 'https://raw.githubusercontent.com/israelberko/chime-branding/master/che-editor.meta.yaml'
