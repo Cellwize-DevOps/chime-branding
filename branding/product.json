@@ -1,22 +1,22 @@
 {
-    "name": "Chime Developer Python Workspaces",  
+    "name": "Chime Developer Python Workspace",  
     "icon": "chime-developer.png", 
     "logo": {                                
         "dark": "cellwize-logo-dark.png",
         "light": "cellwize-logo-light.png"
     },
     "welcome": {                             
-        "title": "Welcome to Chime Developer Python Workspace",
+        "title": "Chime Developer Python Application Workspace",
         "links": ["website", "documentation"]
     },
     "links": {                               
         "website": {
             "name": "Discover Chime Platform",
-            "url": "https://www.cellwize.com/"
+            "url": "https://www.cellwize.com/platform/"
         },
         "documentation": {
             "name": "Browse Documentation Of Chime Platform",
-            "url": "https://kb.cellwize.com/display/DPO/Documentation+Portal+Home"
+            "url": "https://kb.cellwize.com/display/DPO/API+References"
         }
     }
 }	 
