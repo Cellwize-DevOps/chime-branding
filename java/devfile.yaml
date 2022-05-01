@@ -1,6 +1,6 @@
 apiVersion: 1.0.0
 metadata:
-  name: python-chime
+  name: java-chime
 projects:
   - name: console-java-simple
     source:
