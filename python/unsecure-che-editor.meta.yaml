@@ -129,6 +129,18 @@ spec:
       name: che-machine-exec
       ports:
         - exposedPort: 3333
+    - image: 'python:3.9-slim'
+      name: python
+      memoryLimit: 256M
+      memoryRequest: 128M
+      cpuLimit: 500m
+      cpuRequest: 100m
+      command: ["tail", "-f", "/dev/null"]
+      workingDir: /workspace
+      mountSources: true
+      volumes:
+        - name: workspace
+          mountPath: /workspace
   initContainers:
     - image: 'quay.io/eclipse/che-theia-endpoint-runtime-binary:next'
       memoryLimit: 128Mi
