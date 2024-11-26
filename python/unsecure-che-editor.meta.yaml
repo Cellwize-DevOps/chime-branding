@@ -21,7 +21,7 @@ spec:
         discoverable: false
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
+        secure: true
       public: true
     - name: webviews
       targetPort: 3100
@@ -32,7 +32,7 @@ spec:
         unique: true
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
+        secure: true
       public: true
     - name: mini-browser
       targetPort: 3100
@@ -43,7 +43,7 @@ spec:
         unique: true
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
+        secure: true
       public: true
     - name: theia-dev
       targetPort: 3130
@@ -52,7 +52,6 @@ spec:
         discoverable: false
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
       public: true
     - name: theia-redirect-1
       targetPort: 13131
@@ -60,7 +59,6 @@ spec:
         discoverable: false
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
       public: true
     - name: theia-redirect-2
       targetPort: 13132
@@ -68,7 +66,6 @@ spec:
         discoverable: false
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
       public: true
     - name: theia-redirect-3
       targetPort: 13133
@@ -76,7 +73,6 @@ spec:
         discoverable: false
         urlRewriteSupported: true
         protocol: http
-        secure: false # Changed to false
       public: true
     - name: terminal
       targetPort: 3333
@@ -86,7 +82,7 @@ spec:
         cookiesAuthEnabled: true
         urlRewriteSupported: true
         protocol: ws
-        secure: false # Changed to false
+        secure: false
       public: true
   containers:
     - image: 'docker.io/mudex/developer-python-theia:7.41.2-qrebranding'
@@ -129,18 +125,6 @@ spec:
       name: che-machine-exec
       ports:
         - exposedPort: 3333
-    - image: 'python:3.9-slim'
-      name: python
-      memoryLimit: 256M
-      memoryRequest: 128M
-      cpuLimit: 500m
-      cpuRequest: 100m
-      command: ["tail", "-f", "/dev/null"]
-      workingDir: /workspace
-      mountSources: true
-      volumes:
-        - name: workspace
-          mountPath: /workspace
   initContainers:
     - image: 'quay.io/eclipse/che-theia-endpoint-runtime-binary:next'
       memoryLimit: 128Mi
